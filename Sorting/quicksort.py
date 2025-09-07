@@ -30,13 +30,13 @@ def particion(list,left,right):
    print("swap ! " , "i = ", i , "j=", j)
    list[i], list[j] = swap(list[i],list[j])
 
+   if(list[i]!=pivot):
+    i+=1
    
-   i+=1
-
-   if(i>j): 
+   if(i>=j): 
     
     printList(list,left,right,pivot)
-    return i,j
+    return i+1,j-1
 
   while(pivot>list[i]):
    i+=1
@@ -55,7 +55,8 @@ def sort(list,left,right):
 
 
 
- if(left<j):sort(list,left,j)
+ if(left<j):
+  sort(list,left,j)
  if (i<right):sort(list,i,right)
 
 
@@ -65,8 +66,8 @@ def quicksort(list):
 
 
 
-list = [3,0,1,8,7,2,5,4,9,6]
-#list = [23,11,-18,37,22,53,4,9,6]
+#list = [3,0,1,8,7,2,5,4,9,6]
+list = [23,11,-18,37,22,53,4,9,6]
 
 
 
