@@ -2,49 +2,61 @@ import random
 
 
 
-def printList(list,left, right,pivot):
- 
- print("Pivot = " ,pivot)
- for k in range(left,right+1):
-  print(list[k],"|",end=" ")
- print("\n")
-  
-
 
 def swap(a , b):
  return b , a
 
  
 
-def particion(list, left, right):
-    pivot = list[left]
-    i = left + 1
-    j = right
+def particion(list,left,right):
+ 
+ 
+ pivot = list[left]
+ i = left
+ j = right
+
+ while(i<=j):
+  
+  while(pivot<list[j]):
+   j-=1
+
+  if(i<=j):
+   
+   list[i], list[j] = swap(list[i],list[j])
+  
+   if(list[i]== pivot and list[j]== pivot and i!=j):
+    i+=1
+   if(list[i]!=pivot):
+    i+=1
+   
+   if(i>=j): 
     
-    while True:
-        while i <= j and list[i] <= pivot:
-            i += 1
-        while i <= j and list[j] > pivot:
-            j -= 1
-            
-        if i <= j:
-            list[i], list[j] = list[j], list[i]
-        else:
-            break
-    
-    list[left], list[j] = list[j], list[left]
-    return j
+    return i+1,j-1
+
+  while(pivot>list[i]):
+   i+=1
+
+  
+
+ return i,j  
 
     
    
-def sort(list, left, right):
-    if left < right:
-        pivot_index = particion(list, left, right)
-        sort(list, left, pivot_index - 1)
-        sort(list, pivot_index + 1, right)
+def sort(list,left,right):
+ 
+ i,j = particion(list,left,right)
+ print("\n")
+
+
+
+ if(left<j):
+  sort(list,left,j)
+ if (i<right):
+  sort(list,i,right)
 
 def quicksort(list):     
-    sort(list, 0, len(list)-1)
+    
+ sort(list,0,len(list)-1)
 
 
 
@@ -53,7 +65,7 @@ def quicksort(list):
 #list = [3,0,1,8,7,2,5,4,9,6]
 #list = [23,11,-18,37,22,53,4,9,6]
 
-for i in range(10):
+for i in range(10000):
     # Clear separator between test cases
     with open("TESTES", 'a', encoding='utf-8') as f:
         f.write("\nTest Case #{}\n".format(i + 1))
