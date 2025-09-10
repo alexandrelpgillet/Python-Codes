@@ -1,0 +1,7 @@
+cd ../Folder_Project
+
+python3 -m venv Venv's name
+
+cd /Venv's name/bin
+
+source activate 
