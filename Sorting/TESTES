@@ -1,38 +1,50 @@
 
 Test Case #1
 ----------------------------------------
-VETOR DESORDENADO: 76|70|30|96|-46|-13|-84|-2|81|-52|-64
-VETOR ORDENADO:    -84|-64|-52|-46|-13|-2|30|70|76|81|96
+VETOR DESORDENADO: 91
+VETOR ORDENADO:    91
 
 Test Case #2
 ----------------------------------------
-VETOR DESORDENADO: 62|-43|85
-VETOR ORDENADO:    -43|62|85
+VETOR DESORDENADO: -86|-19|-76|-7|-71|-67|14|63|19|70
+VETOR ORDENADO:    -86|-76|-71|-67|-19|-7|14|19|63|70
 
 Test Case #3
 ----------------------------------------
-VETOR DESORDENADO: -33|-97|-30|-83|38|30
-VETOR ORDENADO:    -97|-83|-33|-30|30|38
+VETOR DESORDENADO: 65|-85|-32|83|-48|20|58|-1|-9|-87|23
+VETOR ORDENADO:    -87|-85|-48|-32|-9|-1|20|23|58|65|83
 
 Test Case #4
 ----------------------------------------
-VETOR DESORDENADO: -83|-72|-69|5|19|-96|29|-83
+VETOR DESORDENADO: 58|25|20|-80|56|90|-31|-81|-75|-29|-85
+VETOR ORDENADO:    -85|-81|-80|-75|-31|-29|20|25|56|58|90
 
-Test Case #1
+Test Case #5
 ----------------------------------------
-VETOR DESORDENADO: -52
-VETOR ORDENADO:    -52
+VETOR DESORDENADO: 90|-76|25|25|-64|-16|-15
+VETOR ORDENADO:    -76|-64|-16|-15|25|25|90
 
-Test Case #2
+Test Case #6
 ----------------------------------------
-VETOR DESORDENADO: -27|17|-96|8|-2|86|78
-VETOR ORDENADO:    -96|-27|-2|8|17|78|86
+VETOR DESORDENADO: 85|-15|86|17|79|-72
+VETOR ORDENADO:    -72|-15|17|79|85|86
 
-Test Case #3
+Test Case #7
 ----------------------------------------
-VETOR DESORDENADO: 15|-83|-71|-70|-64|24
-VETOR ORDENADO:    -83|-71|-70|-64|15|24
+VETOR DESORDENADO: 30
+VETOR ORDENADO:    30
 
-Test Case #4
+Test Case #8
 ----------------------------------------
-VETOR DESORDENADO: 78|-82|-100|67|74|67|93
+VETOR DESORDENADO: -27|-73|-39|-45|-97|37|5
+VETOR ORDENADO:    -97|-73|-45|-39|-27|5|37
+
+Test Case #9
+----------------------------------------
+VETOR DESORDENADO: 90|53|-20
+VETOR ORDENADO:    -20|53|90
+
+Test Case #10
+----------------------------------------
+VETOR DESORDENADO: -16|-36|31|-31|33|-71|-22|-94|-61|36
+VETOR ORDENADO:    -94|-71|-61|-36|-31|-22|-16|31|33|36
