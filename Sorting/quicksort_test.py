@@ -61,6 +61,13 @@ def quicksort(list):
 
 
 
+def check_ordenation(list):
+
+    if(list == sorted(list)):  
+      return "VETOR ORDENADO\n"      
+    
+    else:
+      return "VETOR NAO ORDENADO\n"  
 
 #list = [3,0,1,8,7,2,5,4,9,6]
 #list = [23,11,-18,37,22,53,4,9,6]
@@ -92,6 +99,7 @@ for i in range(10000):
     
     # Write sorted list
     with open("TESTES", 'a', encoding='utf-8') as f:
+        f.write(check_ordenation(list))
         f.write("VETOR ORDENADO:    ")
         for l in range(len(list)):
             if l < len(list) - 1:
@@ -99,6 +107,7 @@ for i in range(10000):
             else:
                 f.write(str(list[l]))
         f.write("\n")
+
 
 
   
