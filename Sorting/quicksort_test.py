@@ -38,7 +38,7 @@ def particion(list,left,right):
 
   
 
- return i,j  
+ return i+1,j-1  
 
     
    

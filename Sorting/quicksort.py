@@ -1,3 +1,4 @@
+num =0
 
 
 def printList(list,left, right,pivot):
@@ -14,7 +15,7 @@ def swap(a , b):
 
  
 
-def particion(list,left,right):
+def particion(list,left,right,num):
  
  
  pivot = list[left]
@@ -24,22 +25,25 @@ def particion(list,left,right):
  while(i<=j):
   
   while(pivot<list[j]):
-   j-=1
+    j-=1
 
   if(i<=j):
    
-   print("swap ! " , "i = ", i , "j=", j, "pivot=",pivot)
+   print("swap ! " , "V[i] = ", list[i] , "V[j]=", list[j])
+   num[0]+=1
    list[i], list[j] = swap(list[i],list[j])
-  
+   
    if(list[i]== pivot and list[j]== pivot and i!=j):
-    i+=1
+    
+     i+=1
+   
    elif (list[i]!=pivot): 
-    i+=1
+     i+=1
    
    if(i>=j): 
     
-    printList(list,left,right,pivot)
-    return i+1,j-1
+     printList(list,left,right,pivot)
+     return i+1,j-1
 
   while(pivot>list[i]):
    i+=1
@@ -47,26 +51,26 @@ def particion(list,left,right):
  printList(list,left,right,pivot) 
   
 
- return i,j  
+ return i+1,j-1  
 
     
    
-def sort(list,left,right):
+def sort(list,left,right,num):
  
- i,j = particion(list,left,right)
+ i,j = particion(list,left,right,num)
  print("\n")
 
 
 
  if(left<j):
-  sort(list,left,j)
+  sort(list,left,j,num)
  if (i<right):
-  sort(list,i,right)
+  sort(list,i,right,num)
 
 
-def quicksort(list):     
-    
- sort(list,0,len(list)-1)
+def quicksort(list,num):     
+ 
+ sort(list,0,len(list)-1,num)
 
 
 
@@ -76,10 +80,17 @@ def quicksort(list):
 
 
 #Casos problemáticos de ordenação ainda :
-list =[ 67,82,100,67,74,67,93]
+#list =[ 67,82,100,67,74,67,93]
 #list =[ 78,-82,-100,67,74,67,93]
 
 
 
-quicksort(list)
+list = [3,0,1,8,7,2,5,4,9,6]
+num =[0]
+
+#list =[78,56,78,58]
+
+#list =[58,58,58,58]
+quicksort(list,num)
+print("QUANTIDADE DE TROCAS : ",num)
 print("Vetor ordenado:", list)
