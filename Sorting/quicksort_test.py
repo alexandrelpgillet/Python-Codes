@@ -86,7 +86,6 @@ for i in range(10000):
     
     # Write unsorted list
     with open("TESTES", 'a', encoding='utf-8') as f:
-        f.write("VETOR DESORDENADO: ")
         for l in range(len(list)):
             if l < len(list) - 1:
                 f.write(str(list[l]) + "|")
@@ -100,7 +99,6 @@ for i in range(10000):
     # Write sorted list
     with open("TESTES", 'a', encoding='utf-8') as f:
         f.write(check_ordenation(list))
-        f.write("VETOR ORDENADO:    ")
         for l in range(len(list)):
             if l < len(list) - 1:
                 f.write(str(list[l]) + "|")
