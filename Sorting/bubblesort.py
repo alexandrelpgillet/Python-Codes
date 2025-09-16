@@ -1,49 +1,40 @@
 
-def  swap(a , b):
-   
-  return  b, a
 
-def bubblesort(list):
-  
-  
-  q = 0;
-  
 
-   
-  for j in range (len(list)-1, 0, -1):
-      
-      trade = False;
-      
-      for i in range (0,j):
-        
-        
-        q+=1
-        
-        if(list[i]>list[i+1]):     
-          trade = True;
-          list[i],list[i+1]= swap(list[i], list[i+1])
-        
-      if(trade==False):
-        
-        return q
-        
-          
-  return q    
+def swap(a , b):
  
- 
+  return b,a
+
+
+def bubblesort(list) : 
     
-list = [3,0,1,8,7,2,5,4,9,6]
-
-
-
-q= bubblesort(list)
-
-
-print("q=",q)
-print(list)     
-        
-  
-      
      
-     
-       
+    
+    
+    for i in range(len(list),0, -1):
+         
+         trade = 0
+         not_trade = 0
+             
+          
+         for j in range(0,i-1):
+
+              if(list[j]>list[j+1]):
+                  
+                  trade += 1
+                  
+ 
+                  list[j], list [j+1]=swap(list[j],list[j+1])    
+
+              else:
+                 
+                  not_trade +=1
+          
+         if(not_trade+1>=trade): break
+                  
+list = [5,4,3,2,1]
+#list = [3,1,7,2,6,4,5]
+
+bubblesort(list)
+
+print(list)
